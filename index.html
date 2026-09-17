@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M&M Joyería · Relojería</title>
+<meta name="description" content="Relojes y joyas seleccionados con precisión, diseño y estilo.">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style id="mm-search-v1-1409">
+.mm-search-overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding-top:110px;z-index:9998}
+.mm-search-overlay.open{display:flex}
+.mm-search-box{width:min(680px,calc(100vw - 40px));background:#fff;border-radius:18px;box-shadow:0 25px 70px rgba(0,0,0,.22);padding:24px}
+.mm-search-top{display:flex;align-items:center;gap:12px;border-bottom:1px solid #ddd;padding-bottom:14px}
+.mm-search-top input{flex:1;border:0;outline:0;font:inherit;font-size:18px;background:transparent}
+.mm-search-close{border:0;background:none;font-size:25px;cursor:pointer}
+.mm-search-results{max-height:55vh;overflow:auto;margin-top:12px}
+.mm-search-result{display:flex;align-items:center;gap:14px;padding:12px 4px;border-bottom:1px solid #eee;cursor:pointer}
+.mm-search-result img{width:58px;height:58px;object-fit:contain;background:#fff}
+.mm-search-result strong{display:block}
+.mm-search-result small{opacity:.65}
+.mm-search-empty{padding:22px 4px;opacity:.65}
+.featured-product-actions{display:flex;gap:8px;align-items:center;margin-top:13px;flex-wrap:wrap}.featured-product-actions .featured-product-link{margin-top:0!important}.featured-product-cart{display:inline-flex;align-items:center;justify-content:center;min-height:27px;padding:0 12px!important;border:1px solid currentColor!important;background:transparent!important;color:var(--featured-ink)!important;box-shadow:none!important;font-size:8px!important;font-weight:700!important;letter-spacing:.08em;text-decoration:none}.featured-product-cart:hover{background:var(--featured-ink)!important;color:var(--featured-card)!important}.featured-product-actions .featured-product-link{white-space:nowrap}.featured-product-cart{white-space:nowrap}@media(max-width:560px){.featured-product-actions{gap:7px}.featured-product-actions .featured-product-link,.featured-product-cart{font-size:7.5px!important}}</style>
+
+<style id="mm-jewelry-home-v1">
+.jewelry-products-section{margin-top:0}
+.jewelry-empty{grid-column:1/-1;padding:42px 20px;text-align:center;border:1px solid rgba(0,0,0,.12);font-family:Montserrat,sans-serif;font-size:13px;letter-spacing:.04em;color:#666;background:#fff}
+</style>
+<script src="media.js"></script><style>
+/* M&M Typography isolation/fix: UI text uses Montserrat; brand marks retain their editorial identity. */
+:where(body, button, input, select, textarea, label, p, a, li, small, span, h1, h2, h3, h4, h5, h6) {
+  font-family: Montserrat, Arial, sans-serif;
+}
+/* Preserve intentional M&M brand marks */
+.brand-name,
+.footer-brand strong,
+.story-panel-monogram strong,
+.adm-logo strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+/* Public-site editorial headings were unintentionally inheriting the serif admin style. */
+.hero-content h1,
+.category-copy h2,
+.jewelry-feature-copy h2,
+.featured-products-header h2,
+.story-panel-copy h2,
+.footer-promise,
+.catalog-head h1,
+.catalog-strip,
+.catalog-header,
+.pd-title,
+.pd-brand,
+.pd-model,
+.pd-price,
+.pd-description,
+.pd-btn,
+.mm-cart-head h2,
+.mm-cart-item-info strong {
+  font-family: Montserrat, Arial, sans-serif;
+}
+/* Admin typography: clean sans hierarchy throughout, matching the professional dashboard UI. */
+.admin-main,
+.admin-main *:not(.adm-logo):not(.adm-logo *) {
+  font-family: Montserrat, Arial, sans-serif;
+}
+.admin-main h1,
+.admin-main h2,
+.admin-main h3,
+.admin-main h4,
+.admin-main h5,
+.admin-main h6,
+.adm-topbar h1,
+.section-head h2,
+.adm-card h3,
+.login-card h1,
+.product-card h3 {
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -.015em;
+}
+
+</style>
+
+<style id="mm-typography-final-fix">
+.mm-cart-head h2,.mm-cart-item-info strong{font-family:Montserrat,Arial,sans-serif!important;font-weight:700!important}
+.account-user,.account-btn,.account-admin,.account-email{font-family:Montserrat,Arial,sans-serif!important}
+</style>
+</head>
+<body>
+<main id="inicio" class="hero-page">
+<section class="hero-shell" aria-labelledby="hero-title">
+<img class="rock-backdrop" src="assets/dark-rock-backdrop.jpg" alt="Textura de roca oscura" width="1920" height="928">
+<div class="scene-shade" aria-hidden="true"></div>
+<div class="service-strip"><div class="service-strip-inner" aria-label="Servicios">
+<span>%%TRUCK%% ENVÍOS A TODO EL PAÍS</span><i></i><span>%%STORE%% RETIRO EN LOCAL</span><i></i><span>%%CARD%% 3 Y 6 CUOTAS SIN INTERÉS</span>
+</div></div>
+<header class="site-header">
+<a href="#inicio" class="brand"><span class="brand-name">M&amp;M</span><span class="brand-category">JOYERÍA · RELOJERÍA</span><span class="brand-year">DESDE 1990</span></a>
+<nav class="desktop-nav" aria-label="Navegación principal"><a class="active" href="#inicio">INICIO</a><a href="catalogo.html">RELOJES</a><a href="#joyas">JOYAS</a><a href="#marcas">MARCAS</a><a href="#nosotros">NOSOTROS</a><a href="#contacto">CONTACTO</a></nav>
+<div class="header-actions"><button aria-label="Buscar">%%SEARCH%%</button><button aria-label="Mi cuenta" type="button" onclick="window.location.href='cuenta.html'">%%USER%%</button><button class="cart-action" aria-label="Carrito, sin productos">%%CART%%<span>0</span></button><button class="menu-action" aria-label="Abrir menú">%%MENU%%</button></div>
+</header>
+<div class="hero-content"><div class="eyebrow"><span>MÁS QUE RELOJES</span><i></i></div><h1 id="hero-title">Historias<br>que perduran.</h1><p>Las mejores marcas en relojería y joyería, con la confianza de siempre y la atención de un equipo que te acompaña.</p><a class="hero-cta ui-button" href="catalogo.html">VER RELOJES %%ARROW%%</a></div>
+<div class="watch-stage" aria-hidden="true"><img src="assets/seiko-watch.png" alt="" width="1024" height="1536"></div>
+<aside class="quality-note"><span>PRECISIÓN</span><span>TRADICIÓN</span><span>ESTILO</span><span>SIEMPRE</span></aside><div class="heritage-mark"><span>M&amp;M</span><strong>1990</strong></div>
+</section>
+<section class="benefits-band"><div class="benefits-inner">
+<div class="benefit-item">%%TRUCKBIG%%<div><strong>ENVÍOS A TODO EL PAÍS</strong><span>Rápidos y seguros</span></div></div>
+<div class="benefit-item">%%STOREBIG%%<div><strong>RETIRO EN LOCAL</strong><span>Ramos Mejía, Bs. As.</span></div></div>
+<div class="benefit-item">%%CARDBIG%%<div><strong>3 Y 6 CUOTAS SIN INTERÉS</strong><span>Con todas las tarjetas</span></div></div>
+<div class="benefit-item">%%SHIELDBIG%%<div><strong>GARANTÍA OFICIAL</strong><span>En todos nuestros productos</span></div></div>
+</div></section>
+<section id="relojes" class="category-showcase" aria-label="Colecciones">
+<article class="category-panel category-watches"><img src="assets/bulova-relojes.png" alt="Reloj Bulova automático de acero sobre mármol oscuro" width="1536" height="1024"><div class="category-shade"></div><div class="category-copy"><h2>RELOJES</h2><p>Precisión, diseño y estilo<br>para cada momento.</p><a class="category-link ui-button" href="catalogo.html">VER COLECCIÓN %%ARROW%%</a></div></article>
+<article class="category-panel category-jewelry"><img src="assets/jewelry-editorial.jpg" alt="Anillo de oro con diamante y cadena sobre travertino y seda crema" width="1536" height="768"><div class="category-shade"></div><div class="category-copy"><h2>JOYAS</h2><p>Piezas que acompañan<br>tus mejores historias.</p><a class="category-link ui-button" href="#joyas">VER COLECCIÓN %%ARROW%%</a></div></article>
+</section>
+<section id="marcas" class="brand-row" aria-label="Nuestras marcas">
+<article class="brand-card"><img src="https://images.pexels.com/photos/30508189/pexels-photo-30508189.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Reloj Seiko diver con bisel rojo y azul en un ambiente exterior oscuro" width="1200" height="800"><div class="brand-card-shade"></div><div class="brand-card-copy"><h3>SEIKO</h3><p>UNA PASIÓN QUE<br>AVANZA CON EL TIEMPO.</p><a class="brand-card-link ui-button" href="#marcas">VER SEIKO %%ARROW%%</a></div></article>
+<article class="brand-card"><img src="assets/orient-ra-bb0001e.webp" alt="Reloj Orient automático de esfera verde con malla de cuero marrón" width="1200" height="800"><div class="brand-card-shade"></div><div class="brand-card-copy"><h3>ORIENT</h3><p>TRADICIÓN JAPONESA<br>EN CADA DETALLE.</p><a class="brand-card-link ui-button" href="#marcas">VER ORIENT %%ARROW%%</a></div></article>
+<article class="brand-card"><img src="https://images.pexels.com/photos/11106319/pexels-photo-11106319.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Reloj Casio G-Shock negro en una composición oscura y técnica" width="1200" height="800"><div class="brand-card-shade"></div><div class="brand-card-copy"><h3>CASIO</h3><p>CONFIABILIDAD<br>PARA TODOS LOS DÍAS.</p><a class="brand-card-link ui-button" href="#marcas">VER CASIO %%ARROW%%</a></div></article>
+</section>
+<section id="joyas" class="jewelry-feature"><img src="assets/joyas-banner.jpg" alt="Anillos y cadenas de oro sobre travertino y seda crema" width="1920" height="860"><div class="jewelry-feature-shade"></div><div class="jewelry-feature-copy"><span class="jewelry-feature-label">JOYAS</span><h2>Piezas únicas para<br>momentos que perduran.</h2><a class="jewelry-feature-link ui-button" href="#joyas">VER JOYAS %%ARROW%%</a></div></section>
+<section class="featured-products"><header class="featured-products-header"><span>RELOJERÍA</span><h2>Nuestros destacados</h2><p>Una selección de piezas que combinan diseño, precisión y elegancia.</p></header><div class="featured-products-grid">
+%%PRODUCTS%%
+</div></section>
+<section class="featured-products jewelry-products-section" aria-label="Joyas destacadas">
+<header class="featured-products-header"><span>JOYERÍA</span><h2>Nuestras joyas</h2><p>Una selección de piezas pensadas para acompañar tus momentos más especiales.</p></header>
+<div class="featured-products-grid" id="jewelryProductsGrid">
+<div class="jewelry-empty">Todavía no hay joyas publicadas. Podés agregarlas desde Administración.</div>
+</div>
+</section>
+<section id="nosotros" class="story-panels"><article class="story-panel story-panel-history"><img src="assets/story-history.jpg" alt="Identidad de M&amp;M Joyería y Relojería con iluminación cálida" width="1536" height="1024"><div class="story-panel-shade"></div><div class="story-panel-copy"><span>NUESTRA HISTORIA</span><h2>M&amp;M</h2><p>Desde 1990, acompañando<br>momentos importantes.</p><a class="story-panel-link ui-button" href="#nosotros">CONOCER MÁS %%ARROW%%</a></div></article>
+<article class="story-panel story-panel-store"><img src="assets/story-store.jpg" alt="Interior del local M&amp;M con mostrador y vitrinas iluminadas" width="1920" height="928"><div class="story-panel-shade"></div><div class="story-panel-monogram"><strong>M&amp;M</strong><span>JOYERÍA · RELOJERÍA</span></div><div class="story-panel-copy"><span>ATENCIÓN PERSONALIZADA</span><h2>Visitá nuestro local</h2><p>Ramos Mejía, Bs. As.</p><a class="story-panel-link ui-button" href="#contacto">CÓMO LLEGAR %%ARROW%%</a></div></article></section>
+<footer id="contacto" class="site-footer"><div class="site-footer-main"><a class="footer-brand" href="#inicio"><strong>M&amp;M</strong><span>JOYERÍA · RELOJERÍA</span><small>DESDE 1990</small></a><nav class="footer-nav"><a href="#inicio">INICIO</a><a href="catalogo.html">RELOJES</a><a href="#joyas">JOYAS</a><a href="#marcas">MARCAS</a><a href="#nosotros">NOSOTROS</a><a href="#contacto">CONTACTO</a></nav><div class="footer-social"><a href="#instagram" aria-label="Instagram">%%INSTAGRAM%%</a><a href="#whatsapp" aria-label="WhatsApp">%%MSG%%</a></div><p class="footer-promise">Tu historia,<br>nuestro compromiso.</p></div><div class="site-footer-bottom"><p>© 2026 M&amp;M Jewelry · Joyería · Relojería.<br class="footer-mobile-break"> Todos los derechos reservados.</p><p>%%PIN%% Ramos Mejía, Buenos Aires, Argentina.</p></div></footer>
+</main>
+<script src="icons.js"></script><script>(async function(){
+  const KEY='mm_products_v1';
+  const QUOTES='mm_quotes_v1';
+  const LEGACY_IDS=new Set(['featured-1','featured-2','featured-3','featured-4','featured-5','featured-6','featured-7','featured-8',...Array.from({length:8},(_,i)=>'seed-'+i)]);
+  let products; try{products=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){products=[]}
+  if(!Array.isArray(products)) products=[];
+  products=products.filter(p=>p && !LEGACY_IDS.has(String(p.id)));
+  try{localStorage.setItem(KEY,JSON.stringify(products))}catch(e){}
+  let quotes={usd:0,gold:0,silver:0}; try{quotes={...quotes,...JSON.parse(localStorage.getItem(QUOTES)||'{}')}}catch(e){}
+  const money=v=>Number(v||0).toLocaleString('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0});
+  const calc=p=>p.pricing==='gold' ? Number(p.gold||0)*Number(quotes.gold||0)+Number(p.workmanship||0) : p.pricing==='silver' ? Number(p.silver||0)*Number(quotes.silver||0)+Number(p.workmanship||0) : Number(p.usd||0)*Number(quotes.usd||0);
+  const safeResolve=async ref=>{try{return await MMMedia.resolve(ref)}catch(e){console.warn('M&M: no se pudo resolver imagen',e);return null}};
+  const grid=document.querySelector('.featured-products-grid');
+  if(grid){
+    const shown=products.filter(p=>p.published!==false && p.featured!==false);
+    const shownResolved=await Promise.all(shown.map(async p=>({...p,_image:await safeResolve(p.image)||p.image||'assets/featured-new-01.jpg'})));
+    grid.innerHTML=shownResolved.map(p=>`<article class="featured-product-card"><div class="featured-product-image"><img src="${p._image||p.image}" alt="${p.name}" width="768" height="720" loading="lazy"></div><div class="featured-product-details"><span class="featured-product-brand">${p.brand||'M&M'}</span><h3>${p.name}</h3><p class="featured-product-price">${calc(p)>0?money(calc(p)):'Consultar'}</p><div class="featured-product-actions"><a class="featured-product-link ui-button" href="producto.html?id=${encodeURIComponent(p.id)}">VER PRODUCTO ${icons.ARROW}</a><button type="button" class="featured-product-cart ui-button" data-product-id="${p.id}" aria-label="Agregar ${p.name} al carrito">AGREGAR AL CARRITO</button></div></div></article>`).join('');
+  }
+  const jewelryGrid=document.getElementById('jewelryProductsGrid');
+  if(jewelryGrid){
+    const jewelry=products.filter(p=>p.published!==false && String(p.category||'').trim().toLowerCase()==='joyas');
+    const jewelryResolved=await Promise.all(jewelry.map(async p=>({...p,_image:await safeResolve(p.image)||p.image||'assets/featured-new-01.jpg'})));
+    jewelryGrid.innerHTML=jewelry.length?jewelryResolved.map(p=>`<article class="featured-product-card"><div class="featured-product-image"><img src="${p._image||p.image}" alt="${p.name}" width="768" height="720" loading="lazy"></div><div class="featured-product-details"><span class="featured-product-brand">${p.brand||'M&M'}</span><h3>${p.name}</h3><p class="featured-product-price">${calc(p)>0?money(calc(p)):'Consultar'}</p><div class="featured-product-actions"><a class="featured-product-link ui-button" href="producto.html?id=${encodeURIComponent(p.id)}">VER PRODUCTO ${icons.ARROW}</a><button type="button" class="featured-product-cart ui-button" data-product-id="${p.id}" aria-label="Agregar ${p.name} al carrito">AGREGAR AL CARRITO</button></div></div></article>`).join(''):'<div class="jewelry-empty">Todavía no hay joyas publicadas. Podés agregarlas desde Administración.</div>';
+  }
+  if(new URLSearchParams(location.search).get('admin')==='1') location.replace('admin.html');
+})();</script>
+<div class="mm-search-overlay" id="mmSearchOverlay" aria-hidden="true">
+  <div class="mm-search-box" role="dialog" aria-modal="true" aria-label="Buscar productos">
+    <div class="mm-search-top">
+      <span aria-hidden="true">⌕</span>
+      <input id="mmSearchInput" type="search" placeholder="Buscar productos, marcas..." autocomplete="off">
+      <button class="mm-search-close" id="mmSearchClose" aria-label="Cerrar">×</button>
+    </div>
+    <div class="mm-search-results" id="mmSearchResults"></div>
+  </div>
+</div>
+
+
+<script id="mm-search-v1-1409-js">
+(function(){
+  function initMMSearch(){
+    const overlay=document.getElementById('mmSearchOverlay');
+    const input=document.getElementById('mmSearchInput');
+    const results=document.getElementById('mmSearchResults');
+    const close=document.getElementById('mmSearchClose');
+    if(!overlay||!input||!results||!close) return;
+
+    const triggers=[...document.querySelectorAll('button, a, [role="button"]')].filter(el=>{
+      const t=(el.getAttribute('aria-label')||el.title||el.textContent||'').toLowerCase();
+      return t.includes('buscar')||t.includes('search')||t.includes('lupa');
+    });
+    function products(){
+      try{const p=JSON.parse(localStorage.getItem('mm_products_v1')||'[]');return Array.isArray(p)?p:[]}
+      catch(e){return []}
+    }
+    function openSearch(){
+      overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+      input.value=''; render(''); setTimeout(()=>input.focus(),40);
+    }
+    function closeSearch(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true')}
+    function render(q){
+      const list=products(),term=q.trim().toLowerCase();
+      const found=(!term?list.slice(0,8):list.filter(p=>
+        [p.name,p.brand,p.category,p.description,p.model].filter(Boolean).join(' ').toLowerCase().includes(term)
+      ).slice(0,12));
+      if(!found.length){results.innerHTML='<div class="mm-search-empty">No encontramos productos con esa búsqueda.</div>';return}
+      results.innerHTML=found.map(p=>{
+        const img=p.image||p.mainImage||'',id=p.id||p.slug||'';
+        const safe=v=>String(v||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+        return '<div class="mm-search-result" data-id="'+safe(id)+'">'+(img?'<img src="'+safe(img)+'" alt="">':'')+
+        '<div><strong>'+safe(p.name||'Producto')+'</strong><small>'+safe(p.brand||p.category||'')+'</small></div></div>';
+      }).join('');
+      [...results.querySelectorAll('.mm-search-result')].forEach(row=>row.addEventListener('click',()=>{
+        const id=row.dataset.id;if(id)location.href='product-detail.html?id='+encodeURIComponent(id);
+      }));
+    }
+    triggers.forEach(t=>t.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();openSearch()}));
+    input.addEventListener('input',()=>render(input.value));
+    close.addEventListener('click',closeSearch);
+    overlay.addEventListener('click',e=>{if(e.target===overlay)closeSearch()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch()});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initMMSearch);else initMMSearch();
+})();
+</script>
+
+<script src="cart-home.js"></script>
+<style>.mm-cart-drawer{transform:translateX(100%)}.mm-cart-drawer.open{transform:translateX(0)!important}.mm-cart-overlay{opacity:0;pointer-events:none}.mm-cart-overlay.open{opacity:1;pointer-events:auto}</style>
+<script src="site-content.js"></script></body></html>

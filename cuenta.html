@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi cuenta · M&M Joyería · Relojería</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--mm-green:oklch(0.235 0.072 166);--mm-green-deep:oklch(0.19 0.055 166);--mm-cream:#f5f1e8;--mm-ink:#171714;--mm-gold:#d8c7a0;--mm-line:#d8d1c4}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Montserrat,Arial,sans-serif;color:var(--mm-ink);background:var(--mm-cream)}button,input{font:inherit}a{color:inherit}
+.account-site{min-height:100svh;background:var(--mm-cream)}
+.account-header{position:relative;z-index:20;height:98px;background:linear-gradient(180deg,var(--mm-green) 0%,var(--mm-green-deep) 100%);color:#f7f4eb;border-bottom:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:180px minmax(0,1fr) 180px;align-items:center;padding:0 clamp(28px,6.2vw,100px)}
+.account-brand{width:126px;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-self:start;color:#f7f4eb}.account-brand strong{font:500 39px/.8 "Cormorant Garamond",serif;letter-spacing:.01em}.account-brand span{margin-top:11px;font-size:7px;font-weight:600;letter-spacing:.02em}.account-brand small{margin-top:5px;font-size:7px;font-weight:700;letter-spacing:.08em}
+.account-nav{display:flex;justify-content:center;gap:clamp(24px,3vw,46px)}.account-nav a{text-decoration:none;color:#f7f4eb;font-size:9px;font-weight:700;line-height:1;padding:12px 0;position:relative}.account-nav a:hover{color:#fff}.account-nav a.active:after{content:"";position:absolute;left:0;right:0;bottom:3px;height:1px;background:var(--mm-gold)}
+.account-actions{display:flex;justify-content:flex-end;align-items:center;gap:9px}.account-action{position:relative;width:34px;height:34px;padding:0;border:0;background:transparent;color:#f7f4eb;display:grid;place-items:center;cursor:pointer}.account-action svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}.account-cart-count{position:absolute;right:-2px;top:-2px;min-width:15px;height:15px;padding:0 3px;border-radius:999px;background:var(--mm-gold);color:var(--mm-green-deep);font-size:7px;font-weight:700;display:grid;place-items:center}
+.account-service{height:34px;background:var(--mm-green-deep);color:#f7f4eb;display:flex;align-items:center;justify-content:center;gap:22px;font-size:8px;font-weight:700;letter-spacing:.25em}.account-service i{width:42px;height:1px;background:rgba(216,199,160,.7)}
+.account-main{position:relative;min-height:calc(100svh - 132px);display:grid;place-items:center;padding:70px 28px 90px;overflow:hidden;background:#d8d0c2}.account-main:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(0,35,24,.56),rgba(0,35,24,.20) 48%,rgba(0,0,0,.28)),linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.38)),url('assets/story-store.jpg');background-size:cover;background-position:center;filter:saturate(.78) blur(1px);transform:scale(1.025);opacity:.92}.account-main:after{content:"";position:absolute;inset:0;background:rgba(245,241,232,.12);backdrop-filter:blur(2px)}
+.account-shell{position:relative;z-index:2;width:min(650px,100%);padding:10px}.account-card{background:rgba(249,246,238,.965);border:1px solid rgba(255,255,255,.82);box-shadow:0 28px 80px rgba(0,0,0,.25);padding:clamp(42px,5vw,66px) clamp(30px,5vw,68px) clamp(38px,4vw,58px);text-align:left}
+.account-kicker{text-align:center;color:var(--mm-green);font-size:9px;font-weight:700;letter-spacing:.36em}.account-rule{width:54px;height:1px;background:#b8a77e;margin:15px auto 22px}.account-title{text-align:center;margin:0;font:500 clamp(50px,5vw,66px)/.95 "Cormorant Garamond",serif;color:var(--mm-ink)}.account-copy{text-align:center;margin:15px auto 36px;max-width:430px;color:#69655d;font-size:11px;line-height:1.75}
+.account-form{display:grid;gap:20px;max-width:100%}.account-field{margin-top:1px}.account-field label{display:block;margin-bottom:9px;font-size:8px;font-weight:700;letter-spacing:.2em}.account-input-wrap{position:relative}.account-field input{width:100%;height:48px;border:0;border-bottom:1px solid #bcb6aa;background:transparent;outline:0;padding:0 2px;color:var(--mm-ink);font-size:12px}.account-field input:focus{border-bottom-color:var(--mm-green)}.account-field input::placeholder{color:#aaa49b}.account-password-toggle{position:absolute;right:0;bottom:10px;width:26px;height:26px;border:0;background:transparent;color:#555;cursor:pointer;padding:0}.account-password-toggle svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.account-submit{width:100%;height:52px;margin-top:11px;border:1px solid var(--mm-ink);background:var(--mm-ink);color:#f8f5ed;font-size:9px;font-weight:700;letter-spacing:.22em;cursor:pointer;transition:.2s ease}.account-submit:hover{background:var(--mm-green);border-color:var(--mm-green)}
+.account-bottom{margin-top:27px;padding-top:22px;border-top:1px solid #ded8cc;text-align:center;color:#777167;font-size:10px;line-height:1.6}.account-bottom button{border:0;background:none;padding:0;color:var(--mm-green);font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:inherit}.account-message{min-height:18px;margin-top:12px;text-align:center;color:#8a3c2d;font-size:10px}.account-message.ok{color:#3d6548}
+.account-hidden{display:none!important}.account-logged-actions{display:grid;gap:10px;margin-top:24px}.account-btn{width:100%;height:48px;border:1px solid var(--mm-ink);background:var(--mm-ink);color:#f8f5ed;display:grid;place-items:center;text-decoration:none;font-size:9px;font-weight:700;letter-spacing:.18em;cursor:pointer}.account-btn.secondary{background:transparent;color:var(--mm-ink)}.account-btn:hover{background:var(--mm-green);border-color:var(--mm-green);color:#fff}.account-btn.secondary:hover{color:#fff}.account-user{text-align:center;font:500 38px/1.05 "Cormorant Garamond",serif;margin:12px 0 6px}.account-email{text-align:center;color:#777167;font-size:11px;margin:0}.account-admin{text-align:center;margin-top:24px;padding-top:18px;border-top:1px solid #ded8cc;color:#777167;font-size:10px}.account-admin a{color:var(--mm-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.account-note{text-align:center;margin-top:15px;color:rgba(255,255,255,.82);font-size:8px;letter-spacing:.08em}
+/* Shared search */
+.mm-search-overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding-top:120px;z-index:100000}.mm-search-overlay.open{display:flex}.mm-search-box{width:min(680px,calc(100vw - 32px));background:#fff;border-radius:4px;box-shadow:0 25px 70px rgba(0,0,0,.22);padding:24px}.mm-search-top{display:flex;align-items:center;gap:12px;border-bottom:1px solid #ddd;padding-bottom:14px}.mm-search-top input{flex:1;border:0;outline:0;font-size:17px;background:transparent}.mm-search-close{border:0;background:none;font-size:25px;cursor:pointer}.mm-search-results{max-height:55vh;overflow:auto;margin-top:12px}.mm-search-result{display:flex;align-items:center;gap:14px;padding:12px 4px;border-bottom:1px solid #eee;cursor:pointer}.mm-search-result img{width:58px;height:58px;object-fit:contain;background:#fff}.mm-search-result strong{display:block}.mm-search-result small{opacity:.65}.mm-search-empty{padding:22px 4px;opacity:.65}
+/* Shared M&M cart */
+body.mm-cart-lock{overflow:hidden!important}.mm-cart-overlay{position:fixed;inset:0;background:rgba(18,18,16,.28);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:99998}.mm-cart-drawer{position:fixed;top:0;right:0;width:min(420px,92vw);height:100vh;background:#f7f4ec;color:#171714;transform:translateX(100%);transition:transform .3s ease;z-index:99999;padding:28px 26px;display:flex;flex-direction:column;box-shadow:-18px 0 50px rgba(0,0,0,.12);font-family:Montserrat,Arial,sans-serif}.mm-cart-drawer.open{transform:translateX(0)}body.mm-cart-lock .mm-cart-overlay{opacity:1;pointer-events:auto}.mm-cart-drawer h2{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:500;margin:0}.mm-cart-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(23,23,20,.16)}.mm-cart-close{background:transparent;border:0;font-size:30px;line-height:1;color:#171714;width:36px;height:36px;cursor:pointer}.mm-cart-items{overflow:auto;padding:8px 0;flex:1}.mm-cart-empty{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.6;padding:28px 0}.mm-cart-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(23,23,20,.12)}.mm-cart-item img{width:76px;height:70px;object-fit:cover;background:#e9e2d6}.mm-cart-item-info{flex:1;min-width:0}.mm-cart-item-info strong{display:block;font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:500}.mm-cart-item-info span{display:block;font-size:10px;letter-spacing:.12em;margin-top:3px;opacity:.65}.mm-cart-qty{display:flex;align-items:center;gap:9px;margin-top:12px}.mm-cart-qty button{background:transparent;border:1px solid rgba(23,23,20,.28);width:28px;height:28px;cursor:pointer}.mm-cart-qty b{font-size:12px;min-width:14px;text-align:center}.mm-cart-qty .mm-cart-remove{border:0;width:auto;margin-left:5px;font-size:10px;text-transform:uppercase;letter-spacing:.08em}.mm-cart-foot{border-top:1px solid rgba(23,23,20,.16);padding-top:18px}.mm-cart-foot>div{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}.mm-cart-checkout{width:100%;height:48px;background:#171714;color:#f7f4ec;border:0;letter-spacing:.14em;font-size:10px;cursor:pointer}
+@media(max-width:860px){.account-header{grid-template-columns:1fr auto;height:88px;padding-inline:22px}.account-nav{display:none}.account-brand{justify-self:start}.account-actions{gap:4px}.account-main{padding:44px 18px 64px;min-height:calc(100svh - 122px)}.account-service{font-size:7px;letter-spacing:.17em;gap:13px}.account-service i{width:26px}.account-card{padding:38px 28px 34px}}
+@media(max-width:520px){.account-title{font-size:48px}.account-copy{margin-bottom:28px}.account-main:before{background-position:58% center}.account-card{padding:34px 24px 30px}}
+</style>
+<style>
+/* M&M Typography isolation/fix: UI text uses Montserrat; brand marks retain their editorial identity. */
+:where(body, button, input, select, textarea, label, p, a, li, small, span, h1, h2, h3, h4, h5, h6) {
+  font-family: Montserrat, Arial, sans-serif;
+}
+/* Preserve intentional M&M brand marks */
+.brand-name,
+.footer-brand strong,
+.story-panel-monogram strong,
+.adm-logo strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+/* Public-site editorial headings were unintentionally inheriting the serif admin style. */
+.hero-content h1,
+.category-copy h2,
+.jewelry-feature-copy h2,
+.featured-products-header h2,
+.story-panel-copy h2,
+.footer-promise,
+.catalog-head h1,
+.catalog-strip,
+.catalog-header,
+.pd-title,
+.pd-brand,
+.pd-model,
+.pd-price,
+.pd-description,
+.pd-btn,
+.mm-cart-head h2,
+.mm-cart-item-info strong {
+  font-family: Montserrat, Arial, sans-serif;
+}
+/* Admin typography: clean sans hierarchy throughout, matching the professional dashboard UI. */
+.admin-main,
+.admin-main *:not(.adm-logo):not(.adm-logo *) {
+  font-family: Montserrat, Arial, sans-serif;
+}
+.admin-main h1,
+.admin-main h2,
+.admin-main h3,
+.admin-main h4,
+.admin-main h5,
+.admin-main h6,
+.adm-topbar h1,
+.section-head h2,
+.adm-card h3,
+.login-card h1,
+.product-card h3 {
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -.015em;
+}
+
+</style>
+
+<style id="mm-typography-final-fix">
+.mm-cart-head h2,.mm-cart-item-info strong{font-family:Montserrat,Arial,sans-serif!important;font-weight:700!important}
+.account-user,.account-btn,.account-admin,.account-email{font-family:Montserrat,Arial,sans-serif!important}
+</style>
+</head>
+<body>
+<div class="account-site">
+<header class="account-header">
+<a class="account-brand" href="index.html"><strong>M&amp;M</strong><span>JOYERÍA · RELOJERÍA</span><small>DESDE 1990</small></a>
+<nav class="account-nav" aria-label="Navegación principal"><a href="index.html">INICIO</a><a href="catalogo.html">RELOJES</a><a href="index.html#joyas">JOYAS</a><a href="index.html#marcas">MARCAS</a><a href="index.html#nosotros">NOSOTROS</a><a href="index.html#contacto">CONTACTO</a></nav>
+<div class="account-actions">
+<button class="account-action" id="searchBtn" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg></button>
+<button class="account-action" aria-label="Mi cuenta" aria-current="page"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></button>
+<button class="account-action" id="cartBtn" aria-label="Carrito, 0 productos"><svg viewBox="0 0 24 24"><path d="M3 4h2l2 11h10l3-8H6"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="18" cy="19" r="1.5"></circle></svg><span class="account-cart-count">0</span></button>
+</div>
+</header>
+<div class="account-service"><span>M&amp;M · JOYERÍA · RELOJERÍA</span><i></i><span>DESDE 1990</span></div>
+<main class="account-main">
+<div class="account-shell">
+<section class="account-card" id="loginPanel">
+<div class="account-kicker">CLIENTES</div><div class="account-rule"></div><h1 class="account-title">Ingresar</h1>
+<p class="account-copy">Accedé a tu cuenta para continuar con tu experiencia en M&amp;M.</p>
+<form class="account-form" id="loginForm">
+<div class="account-field"><label for="loginEmail">EMAIL</label><input id="loginEmail" type="email" autocomplete="email" placeholder="Tu email" required></div>
+<div class="account-field"><label for="loginPassword">CONTRASEÑA</label><div class="account-input-wrap"><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Tu contraseña" required><button type="button" class="account-password-toggle" id="toggleLoginPassword" aria-label="Mostrar contraseña"><svg viewBox="0 0 24 24"><path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg></button></div></div>
+<button class="account-submit" type="submit">INGRESAR</button><div id="loginMessage" class="account-message"></div>
+</form>
+<div class="account-bottom">¿Todavía no tenés cuenta? <button type="button" id="showRegister">Crear una cuenta</button></div>
+</section>
+<section class="account-card account-hidden" id="registerPanel">
+<div class="account-kicker">NUEVO CLIENTE</div><div class="account-rule"></div><h2 class="account-title">Crear cuenta</h2>
+<p class="account-copy">Registrate en pocos pasos para guardar tus datos y acceder más rápido en futuras visitas.</p>
+<form class="account-form" id="registerForm">
+<div class="account-field"><label for="registerName">NOMBRE Y APELLIDO</label><input id="registerName" autocomplete="name" placeholder="Tu nombre" required></div>
+<div class="account-field"><label for="registerEmail">EMAIL</label><input id="registerEmail" type="email" autocomplete="email" placeholder="Tu email" required></div>
+<div class="account-field"><label for="registerPassword">CONTRASEÑA</label><div class="account-input-wrap"><input id="registerPassword" type="password" autocomplete="new-password" placeholder="Mínimo 6 caracteres" minlength="6" required><button type="button" class="account-password-toggle" id="toggleRegisterPassword" aria-label="Mostrar contraseña"><svg viewBox="0 0 24 24"><path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg></button></div></div>
+<div class="account-field"><label for="registerConfirm">REPETIR CONTRASEÑA</label><input id="registerConfirm" type="password" autocomplete="new-password" placeholder="Repetí tu contraseña" minlength="6" required></div>
+<button class="account-submit" type="submit">CREAR CUENTA</button><div id="registerMessage" class="account-message"></div>
+</form>
+<div class="account-bottom">¿Ya tenés cuenta? <button type="button" id="showLogin">Ingresar</button></div>
+</section>
+<section class="account-card account-hidden" id="loggedPanel">
+<div class="account-kicker">MI CUENTA</div><div class="account-rule"></div><h2 class="account-title">Bienvenido</h2>
+<div class="account-user" id="accountName"></div><p class="account-email" id="accountEmail"></p>
+<div class="account-logged-actions"><a class="account-btn" href="index.html">VOLVER AL INICIO</a><a class="account-btn secondary" href="catalogo.html">VER RELOJES</a><button class="account-btn secondary" id="logoutCustomer" type="button">CERRAR SESIÓN</button></div>
+<div class="account-admin">¿Sos administrador? <a href="admin.html">Acceso a Administración</a></div>
+</section>
+<div class="account-note">UNA EXPERIENCIA PENSADA PARA ACOMPAÑARTE</div>
+</div>
+</main>
+</div>
+<div class="mm-search-overlay" id="mmSearchOverlay" aria-hidden="true"><div class="mm-search-box" role="dialog" aria-modal="true" aria-label="Buscar productos"><div class="mm-search-top"><span>⌕</span><input id="mmSearchInput" type="search" placeholder="Buscar productos, marcas..." autocomplete="off"><button class="mm-search-close" id="mmSearchClose" aria-label="Cerrar">×</button></div><div class="mm-search-results" id="mmSearchResults"></div></div></div>
+<script>
+const USERS_KEY='mm_customer_users_v1';
+const SESSION_KEY='mm_customer_session_v1';
+const getUsers=()=>{try{return JSON.parse(localStorage.getItem(USERS_KEY)||'[]')}catch(e){return[]}};
+const saveUsers=u=>localStorage.setItem(USERS_KEY,JSON.stringify(u));
+const normalizeEmail=e=>e.trim().toLowerCase();
+const loginPanel=document.getElementById('loginPanel'),registerPanel=document.getElementById('registerPanel'),loggedPanel=document.getElementById('loggedPanel');
+const loginMessage=document.getElementById('loginMessage'),registerMessage=document.getElementById('registerMessage');
+function clearMessages(){loginMessage.textContent='';registerMessage.textContent='';loginMessage.className='account-message';registerMessage.className='account-message'}
+function show(panel){[loginPanel,registerPanel,loggedPanel].forEach(x=>x.classList.add('account-hidden'));panel.classList.remove('account-hidden');clearMessages()}
+function renderSession(){const email=localStorage.getItem(SESSION_KEY);if(!email){show(loginPanel);return}const user=getUsers().find(u=>u.email===email);if(!user){localStorage.removeItem(SESSION_KEY);show(loginPanel);return}document.getElementById('accountName').textContent=user.name;document.getElementById('accountEmail').textContent=user.email;show(loggedPanel)}
+document.getElementById('showRegister').onclick=()=>show(registerPanel);document.getElementById('showLogin').onclick=()=>show(loginPanel);
+document.getElementById('loginForm').onsubmit=e=>{e.preventDefault();clearMessages();const email=normalizeEmail(document.getElementById('loginEmail').value),pw=document.getElementById('loginPassword').value;const user=getUsers().find(u=>u.email===email&&u.password===pw);if(!user){loginMessage.textContent='Email o contraseña incorrectos.';return}localStorage.setItem(SESSION_KEY,user.email);renderSession()};
+document.getElementById('registerForm').onsubmit=e=>{e.preventDefault();clearMessages();const name=document.getElementById('registerName').value.trim(),email=normalizeEmail(document.getElementById('registerEmail').value),pw=document.getElementById('registerPassword').value,confirm=document.getElementById('registerConfirm').value;if(!name){registerMessage.textContent='Ingresá tu nombre y apellido.';return}if(pw.length<6){registerMessage.textContent='La contraseña debe tener al menos 6 caracteres.';return}if(pw!==confirm){registerMessage.textContent='Las contraseñas no coinciden.';return}const users=getUsers();if(users.some(u=>u.email===email)){registerMessage.textContent='Ya existe una cuenta con ese email.';return}const user={id:'customer-'+Date.now(),name,email,password:pw,createdAt:new Date().toISOString()};users.push(user);saveUsers(users);localStorage.setItem(SESSION_KEY,email);renderSession()};
+document.getElementById('logoutCustomer').onclick=()=>{localStorage.removeItem(SESSION_KEY);renderSession()};
+function togglePassword(buttonId,inputId){const button=document.getElementById(buttonId),input=document.getElementById(inputId);button.addEventListener('click',()=>{const visible=input.type==='text';input.type=visible?'password':'text';button.setAttribute('aria-label',visible?'Mostrar contraseña':'Ocultar contraseña')})}
+togglePassword('toggleLoginPassword','loginPassword');togglePassword('toggleRegisterPassword','registerPassword');
+(function(){const STORAGE='mm_cart_v1';let cart=[];try{cart=JSON.parse(localStorage.getItem(STORAGE)||'[]')}catch(e){cart=[]}const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(cart))}catch(e){}};const total=()=>cart.reduce((s,p)=>s+Number(p.qty||0),0);const cartBtn=document.getElementById('cartBtn');const drawer=document.createElement('div');drawer.innerHTML='<div class="mm-cart-overlay" data-close></div><aside class="mm-cart-drawer" aria-label="Carrito de compras" aria-hidden="true"><div class="mm-cart-head"><h2>Tu carrito</h2><button type="button" class="mm-cart-close" aria-label="Cerrar carrito">×</button></div><div class="mm-cart-items"></div><div class="mm-cart-empty">Tu carrito está vacío.</div><div class="mm-cart-foot"><div><span>Productos</span><strong class="mm-cart-count">0</strong></div><button type="button" class="mm-cart-checkout">CONTINUAR</button></div></aside>';document.body.appendChild(drawer);const items=drawer.querySelector('.mm-cart-items'),empty=drawer.querySelector('.mm-cart-empty'),count=drawer.querySelector('.mm-cart-count'),panel=drawer.querySelector('.mm-cart-drawer');const open=()=>{drawer.classList.add('open');panel.setAttribute('aria-hidden','false');document.body.classList.add('mm-cart-lock')};const close=()=>{drawer.classList.remove('open');panel.setAttribute('aria-hidden','true');document.body.classList.remove('mm-cart-lock')};function render(){const n=total();cartBtn.querySelector('.account-cart-count').textContent=n;cartBtn.setAttribute('aria-label',`Carrito, ${n} ${n===1?'producto':'productos'}`);count.textContent=n;empty.style.display=cart.length?'none':'block';items.innerHTML=cart.map((p,i)=>`<div class="mm-cart-item"><img src="${p.img||''}" alt=""><div class="mm-cart-item-info"><strong>${p.name||'Producto'}</strong><span>${p.brand||'M&M'}</span><div class="mm-cart-qty"><button data-dec="${i}" aria-label="Restar">−</button><b>${p.qty}</b><button data-inc="${i}" aria-label="Sumar">+</button><button class="mm-cart-remove" data-del="${i}">Eliminar</button></div></div></div>`).join('')}cartBtn.addEventListener('click',e=>{e.preventDefault();open()});drawer.addEventListener('click',e=>{if(e.target.matches('[data-close],.mm-cart-close'))close();const i=e.target.dataset.inc;if(i!==undefined){cart[i].qty++;save();render()}const d=e.target.dataset.dec;if(d!==undefined){cart[d].qty--;if(cart[d].qty<=0)cart.splice(d,1);save();render()}const x=e.target.dataset.del;if(x!==undefined){cart.splice(x,1);save();render()}});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});render()})();
+(function(){const overlay=document.getElementById('mmSearchOverlay'),input=document.getElementById('mmSearchInput'),results=document.getElementById('mmSearchResults'),close=document.getElementById('mmSearchClose');function list(){try{const p=JSON.parse(localStorage.getItem('mm_products_v1')||'[]');return Array.isArray(p)?p:[]}catch(e){return[]}}function render(q=''){const term=q.trim().toLowerCase();const found=(!term?list().slice(0,8):list().filter(p=>[p.name,p.brand,p.category,p.description,p.model].filter(Boolean).join(' ').toLowerCase().includes(term)).slice(0,12));if(!found.length){results.innerHTML='<div class="mm-search-empty">No encontramos productos con esa búsqueda.</div>';return}results.innerHTML=found.map(p=>`<div class="mm-search-result" data-id="${p.id}"><img src="${p.image||''}" alt=""><div><strong>${p.name||'Producto'}</strong><small>${p.brand||p.category||''}</small></div></div>`).join('')}document.getElementById('searchBtn').addEventListener('click',()=>{overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');input.value='';render();setTimeout(()=>input.focus(),40)});input.addEventListener('input',()=>render(input.value));close.addEventListener('click',()=>{overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true')});overlay.addEventListener('click',e=>{if(e.target===overlay)close.click()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true')}})})();
+renderSession();
+</script>
+</body></html>
