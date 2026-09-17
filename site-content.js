@@ -16,7 +16,7 @@
       promise:'Tu historia,\nnuestro compromiso.'
     },
     catalog:{eyebrow:'RELOJES',title:'Catálogo de relojes',subtitle:'Descubrí las mejores marcas, modelos y estilos en un solo lugar.'},
-    contact:{whatsapp:'',address:'Ramos Mejía, Buenos Aires, Argentina',hours:'Lunes a sábado · 9:30 a 19:30',instagram:''},
+    contact:{whatsapp:'5491133218175',address:'Ramos Mejía, Buenos Aires, Argentina',hours:'Lunes a sábado · 9:30 a 19:30',instagram:'https://www.instagram.com/mymjoyasyrelojes/'},
     pages:{aboutTitle:'M&M',aboutText:'Desde 1990, acompañando momentos importantes.'},
     banners:[]
   };
